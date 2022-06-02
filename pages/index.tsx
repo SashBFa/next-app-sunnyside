@@ -1,15 +1,19 @@
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { ParallaxProvider } from "react-scroll-parallax";
+import HomeGrid from "../components/HomeGrid";
+import { ParallaxHead } from "../components/ParallaxHeader";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faHighlighter } from "@fortawesome/free-solid-svg-icons";
+interface pageProps {
+  colorTheme: { primary: string; secondary: string };
+}
 
-const index = () => {
+const index = (props: pageProps) => {
   return (
-    <div>
-      <h2>
-        Hello next <FontAwesomeIcon icon={faCode} />{" "}
-      </h2>
-    </div>
+    <>
+      <ParallaxProvider>
+        <ParallaxHead />
+      </ParallaxProvider>
+      <HomeGrid />
+    </>
   );
 };
 

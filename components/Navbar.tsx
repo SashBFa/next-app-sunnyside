@@ -4,12 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const Navbar = () => {
-  const colorPrimary: string = "bg-sky-500";
+interface navProps {
+  logo: string;
+  color: string;
+  pages: string[];
+}
+
+const Navbar = (props: navProps) => {
+  const colorPrimary = props.color ? props.color : "transparant";
 
   const burgerStyleOpen: string = "block";
   const burgerStyleClose: string = "hidden";
-  const linkStyle: string = `cursor-pointer w-full p-2 sm:mr-0 sm:ml-4 sm:drop-shadow sm:transition sm:duration-300 sm:py-1 sm:px-2 hover:bg-neutral-900/10`;
+  const linkStyle: string = `cursor-pointer capitalize w-full p-2 sm:mr-0 sm:ml-4 sm:drop-shadow sm:transition sm:duration-300 sm:py-1 sm:px-2 hover:bg-neutral-900/10`;
 
   const [burgerMenu, setBurgerMenu] = useState<boolean>(true);
   const [burgerClass, setBurgerClass] = useState<string>(burgerStyleClose);
@@ -24,16 +30,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`${colorPrimary}`}>
-      <section className="max-w-screen-xl flex items-center p-2 relative">
+    <nav className={`absolute z-10 w-screen bg-[${colorPrimary}]`}>
+      <section className="max-w-screen-xl m-auto flex items-center  p-2 relative">
         <Link href={"/"}>
           <a className="grow mt-2">
-            <Image
-              src={"/images/logo.svg"}
-              alt="logo"
-              width={124}
-              height={24}
-            />
+            <Image src={props.logo} alt="logo" width={124} height={24} />
           </a>
         </Link>
         <div className="sm:hidden">
@@ -54,20 +55,17 @@ const Navbar = () => {
           )}
         </div>
         <ul
-          className={`absolute top-16 right-2 w-6/12 shadow-lg py-2 ${burgerClass} flex-col flex font-bold items-end sm:p-0 sm:relative sm:top-0 sm:right-0 sm:flex-row sm:shadow-none sm:items-center sm:text-white sm:w-fit sm:flex`}
+          className={`absolute top-16 right-2 w-6/12 shadow-lg py-2 font-medium bg-white ${burgerClass} flex-col flex sm:font-bold sm:bg-transparent items-end sm:p-0 sm:relative sm:top-0 sm:right-0 sm:flex-row sm:shadow-none sm:items-center sm:text-white sm:w-fit sm:flex`}
         >
-          <li className={`${linkStyle}`}>
-            <Link href={"/about"}>About</Link>
-          </li>
-          <li className={`${linkStyle}`}>
-            <Link href={"/services"}>Services</Link>
-          </li>
-          <li className={`${linkStyle}`}>
-            <Link href={"/projects"}>Projects</Link>
-          </li>
-          <li className={`${linkStyle}`}>
-            <Link href={"/contact"}>Contact</Link>
-          </li>
+          {props.pages &&
+            props.pages.map((page) => {
+              return (
+                <li className={`${linkStyle}`} key={page}>
+                  <Link href={`/${page}`}>{page}</Link>
+                </li>
+              );
+            })}
+
           <li className={`hidden sm:block cursor-pointer sm:ml-12`}>
             <Link href={"/"}>
               <a>
