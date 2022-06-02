@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import { RespDimensions } from "./AppContext";
-import Dimensions from "./Dimensions";
+import { RespDimensions } from "./utils/AppContext";
+import Dimensions from "./utils/Dimensions";
 import Navbar from "./Navbar";
 
 interface layoutProps {

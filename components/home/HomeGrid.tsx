@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useContext } from "react";
-import { RespDimensions } from "./../components/AppContext";
+import { RespDimensions } from "../utils/AppContext";
 
 const HomeGrid = () => {
   const dWidth = useContext(RespDimensions);
   return (
-    <section className="sm:max-w-xl lg:max-w-7xl grid grid-cols-1 lg:grid-cols-2 m-auto">
+    <section className="grid grid-cols-1 lg:grid-cols-2 m-auto">
       <article className="sm:order-1 lg:order-2">
         <div className="block sm:hidden">
           <Image
@@ -17,7 +17,7 @@ const HomeGrid = () => {
             layout="responsive"
           />
         </div>
-        <div className="hidden sm:block">
+        <div className="hidden sm:block sm:max-w-xl sm:mx-auto lg:max-w-none">
           <Image
             src="./images/desktop/image-transform.jpg"
             alt="img1"
@@ -60,7 +60,7 @@ const HomeGrid = () => {
             layout="responsive"
           />
         </div>
-        <div className="hidden sm:block">
+        <div className="hidden sm:block sm:max-w-xl sm:mx-auto lg:max-w-none">
           <Image
             src="./images/desktop/image-stand-out.jpg"
             alt="img2"

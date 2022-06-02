@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
-import { RespDimensions } from "./AppContext";
+import { RespDimensions } from "../utils/AppContext";
 
 export const ParallaxHead = () => {
   const dWidth = useContext(RespDimensions);
