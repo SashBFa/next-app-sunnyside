@@ -3,8 +3,8 @@ import type { AppProps } from "next/app";
 import Layout from "../components/Layout";
 
 const colorTheme = {
-  primary: "#0284c7",
-  secondary: "#db2777",
+  primary: "#90D4C5",
+  secondary: "#19536B",
 };
 function MyApp({ Component, pageProps }: AppProps) {
   return (
