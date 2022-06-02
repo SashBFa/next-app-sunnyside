@@ -1,6 +1,7 @@
 import { ParallaxProvider } from "react-scroll-parallax";
 import HomeClient from "../components/home/HomeClient";
 import HomeGrid from "../components/home/HomeGrid";
+import HomeLittleGrid from "../components/home/HomeLittleGrid";
 import { ParallaxHead } from "../components/home/ParallaxHeader";
 
 interface pageProps {
@@ -15,6 +16,7 @@ const index = (props: pageProps) => {
       </ParallaxProvider>
       <HomeGrid />
       <HomeClient />
+      <HomeLittleGrid />
     </>
   );
 };

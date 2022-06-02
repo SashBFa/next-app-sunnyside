@@ -27,7 +27,7 @@ const clientData = [
 
 const HomeClient = () => {
   return (
-    <section className="max-w-screen-xl">
+    <section className="max-w-screen-xl mx-auto">
       <h2 className="my-8 uppercase font-medium text-gray-400 text-center text-2xl sm:text-3xl sm:my-12 lg:my-16">
         client testimonials
       </h2>

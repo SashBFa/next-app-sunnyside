@@ -6,7 +6,7 @@ import { RespDimensions } from "../utils/AppContext";
 const HomeGrid = () => {
   const dWidth = useContext(RespDimensions);
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 m-auto">
+    <section className="grid grid-cols-1 lg:grid-cols-2 max-w-screen-xl mx-auto">
       <article className="sm:order-1 lg:order-2">
         <div className="block sm:hidden">
           <Image
