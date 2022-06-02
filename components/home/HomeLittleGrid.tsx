@@ -1,3 +1,5 @@
+import { Box, Grid, Paper } from "@mui/material";
+
 const imgData = [
   {
     id: 1,
@@ -20,29 +22,32 @@ const imgData = [
     pictureDesk: "./images/desktop/image-gallery-sugar-cubes.jpg",
   },
 ];
-
 const HomeLittleGrid = () => {
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-6">
-      {imgData.map((img) => {
-        return (
-          <div key={img.id}>
-            <div
-              className="block sm:hidden w-full h-80"
-              style={{
-                background: `url(${img.pictureMob}) center/cover`,
-              }}
-            />
-            <div
-              className="hidden sm:block w-full h-80 2xl:h-96"
-              style={{
-                background: `url(${img.pictureDesk}) center/cover`,
-              }}
-            />
-          </div>
-        );
-      })}
-    </section>
+    <Grid container component="section" className="mt-6">
+      <Grid item xs={12} component={Paper} elevation={6}>
+        <Box className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {imgData.map((img) => {
+            return (
+              <div key={img.id}>
+                <div
+                  className="block sm:hidden w-full h-80"
+                  style={{
+                    background: `url(${img.pictureMob}) center/cover`,
+                  }}
+                />
+                <div
+                  className="hidden sm:block w-full h-80 2xl:h-96"
+                  style={{
+                    background: `url(${img.pictureDesk}) center/cover`,
+                  }}
+                />
+              </div>
+            );
+          })}
+        </Box>
+      </Grid>
+    </Grid>
   );
 };
 

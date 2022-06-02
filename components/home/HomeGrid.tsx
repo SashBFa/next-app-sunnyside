@@ -1,3 +1,4 @@
+import { Box, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useContext } from "react";
@@ -6,9 +7,19 @@ import { RespDimensions } from "../utils/AppContext";
 const HomeGrid = () => {
   const dWidth = useContext(RespDimensions);
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 max-w-screen-xl mx-auto">
-      <article className="sm:order-1 lg:order-2">
-        <div className="block sm:hidden">
+    <Grid
+      container
+      component="section"
+      className="grid grid-cols-1 lg:grid-cols-2 max-w-screen-xl mx-auto"
+    >
+      <Grid
+        item
+        component={Paper}
+        elevation={6}
+        square
+        className="sm:order-1 lg:order-2"
+      >
+        <Box className="block sm:hidden">
           <Image
             src="./images/mobile/image-transform.jpg"
             alt="img1"
@@ -16,8 +27,8 @@ const HomeGrid = () => {
             height="100%"
             layout="responsive"
           />
-        </div>
-        <div className="hidden sm:block sm:max-w-xl sm:mx-auto lg:max-w-none">
+        </Box>
+        <Box className="hidden sm:block">
           <Image
             src="./images/desktop/image-transform.jpg"
             alt="img1"
@@ -25,8 +36,8 @@ const HomeGrid = () => {
             height="100%"
             layout="responsive"
           />
-        </div>
-      </article>
+        </Box>
+      </Grid>
       <motion.article
         className="sm:order-2 lg:order-1 p-6 sm:p-24 flex flex-col items-center lg:items-start sm:justify-center"
         initial="hidden"
@@ -50,8 +61,14 @@ const HomeGrid = () => {
           Learn more
         </button>
       </motion.article>
-      <article className="sm:order-3">
-        <div className="block sm:hidden">
+      <Grid
+        item
+        component={Paper}
+        elevation={6}
+        square
+        className="sm:order-3 mt-5"
+      >
+        <Box className="block sm:hidden">
           <Image
             src="./images/mobile/image-stand-out.jpg"
             alt="img2"
@@ -59,8 +76,8 @@ const HomeGrid = () => {
             height="100%"
             layout="responsive"
           />
-        </div>
-        <div className="hidden sm:block sm:max-w-xl sm:mx-auto lg:max-w-none">
+        </Box>
+        <Box className="hidden sm:block">
           <Image
             src="./images/desktop/image-stand-out.jpg"
             alt="img2"
@@ -68,8 +85,8 @@ const HomeGrid = () => {
             height="100%"
             layout="responsive"
           />
-        </div>
-      </article>
+        </Box>
+      </Grid>
       <motion.article
         className="sm:order-4 p-6 sm:p-24 flex flex-col items-center lg:items-start sm:justify-center"
         initial="hidden"
@@ -93,8 +110,12 @@ const HomeGrid = () => {
           Learn more
         </button>
       </motion.article>
-      <article
-        className="sm:order-5 min-h-screen p-6 flex flex-col justify-end sm:p-24"
+      <Grid
+        item
+        component={Paper}
+        elevation={6}
+        square
+        className="mt-5 sm:order-5 min-h-screen p-6 flex flex-col justify-end sm:p-24"
         style={{
           background:
             dWidth < 700
@@ -109,9 +130,13 @@ const HomeGrid = () => {
           Great design makes you memorable. We deliver artwork that underscores
           you brand message and captures potential clients attention.
         </p>
-      </article>
-      <article
-        className="sm:order-6 min-h-screen p-6 flex flex-col justify-end sm:p-24 "
+      </Grid>
+      <Grid
+        item
+        component={Paper}
+        elevation={6}
+        square
+        className="mt-5 sm:order-6 min-h-screen p-6 flex flex-col justify-end sm:p-24 "
         style={{
           background:
             dWidth < 700
@@ -126,8 +151,8 @@ const HomeGrid = () => {
           Increase your credibility by getting the most stunning, high-quality
           photos that improve your business image.
         </p>
-      </article>
-    </section>
+      </Grid>
+    </Grid>
   );
 };
 

@@ -72,6 +72,7 @@ const Footer = (props: navProps) => {
             );
           })}
         </ul>
+        <p>Copyright © Sunnyside {new Date().getFullYear()}</p>
       </section>
     </footer>
   );
