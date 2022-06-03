@@ -31,7 +31,7 @@ const Contact = () => {
           <h2 className="font-bold text-transparent text-5xl lg:text-7xl bg-clip-text bg-gradient-to-r from-[#90D4C5] to-[#19536B] drop-shadow-md mb-8 sm:mb-12 lg:mb-32">
             Meet us
           </h2>
-          <p className="text-xl flex items-start mt-3 lg:font-medium lg:items-center text-gray-600">
+          <div className="text-xl flex items-start mt-3 lg:font-medium lg:items-center text-gray-600">
             <Typography color="primary">
               <FontAwesomeIcon
                 icon={faPhone}
@@ -39,8 +39,8 @@ const Contact = () => {
               />
             </Typography>
             +40254665545
-          </p>
-          <p className="text-xl flex items-start mt-3 lg:font-medium lg:items-center text-gray-600">
+          </div>
+          <div className="text-xl flex items-start mt-3 lg:font-medium lg:items-center text-gray-600">
             <Typography color="primary">
               <FontAwesomeIcon
                 icon={faAt}
@@ -48,8 +48,8 @@ const Contact = () => {
               />
             </Typography>
             contact@sunnyside.com
-          </p>
-          <p className="text-xl flex items-start mt-3 lg:font-medium lg:items-center text-gray-600">
+          </div>
+          <div className="text-xl flex items-start mt-3 lg:font-medium lg:items-center text-gray-600">
             <Typography color="primary">
               <FontAwesomeIcon
                 icon={faLocationDot}
@@ -57,7 +57,7 @@ const Contact = () => {
               />
             </Typography>
             3524 North Clark Street Chicago
-          </p>
+          </div>
         </article>
         <Team />
       </div>

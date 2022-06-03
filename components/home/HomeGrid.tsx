@@ -124,7 +124,7 @@ const HomeGrid = () => {
         component={Paper}
         elevation={6}
         square
-        className="mt-5 sm:order-5 min-h-screen p-6 flex flex-col justify-end sm:p-24"
+        className="mt-5 sm:order-5 p-6 flex flex-col justify-end sm:p-24"
         style={{
           background:
             dWidth < 700
@@ -132,7 +132,7 @@ const HomeGrid = () => {
               : "url(./images/desktop/image-graphic-design.jpg) center/cover",
         }}
       >
-        <h4 className="text-4xl sm:text-5xl font-bold text-center text-gray-800 mb-6">
+        <h4 className="text-4xl sm:text-5xl font-bold text-center text-gray-800 mb-6 mt-96">
           Graphic Design
         </h4>
         <p className="text-gray-500 text-center font-medium sm:text-xl">
@@ -145,7 +145,7 @@ const HomeGrid = () => {
         component={Paper}
         elevation={6}
         square
-        className="mt-5 sm:order-6 min-h-screen p-6 flex flex-col justify-end sm:p-24 "
+        className="mt-5 sm:order-6 p-6 flex flex-col justify-end sm:p-24 "
         style={{
           background:
             dWidth < 700
@@ -153,7 +153,7 @@ const HomeGrid = () => {
               : "url(./images/desktop/image-photography.jpg) center/cover",
         }}
       >
-        <h4 className="text-4xl sm:text-5xl font-bold text-center text-gray-800 mb-6">
+        <h4 className="text-4xl sm:text-5xl font-bold text-center text-gray-800 mb-6 mt-96">
           Photography
         </h4>
         <p className="text-gray-500 text-center font-medium sm:text-xl">

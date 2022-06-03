@@ -30,7 +30,7 @@ const Navbar = (props: navProps) => {
   };
 
   return (
-    <nav className={`absolute z-10 w-screen bg-[${colorPrimary}]`}>
+    <nav className={`absolute z-10 w-screen bg-[${colorPrimary}] max-w-full`}>
       <section className="max-w-screen-xl m-auto flex items-center  p-2 relative">
         <Link href={"/"}>
           <a className="grow mt-2">

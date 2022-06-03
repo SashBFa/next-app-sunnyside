@@ -50,7 +50,7 @@ const Team = () => {
           className="w-36 sm:w-40 lg:cursor-pointer group relative"
         >
           <Image
-            src={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            src={`${item.img}?w=248&fit=crop&auto=format&dpr=2`}
             alt={item.name}
             loading="lazy"
             width="100%"

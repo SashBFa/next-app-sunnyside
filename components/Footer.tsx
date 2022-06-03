@@ -39,7 +39,9 @@ const socialLink = [
 
 const Footer = (props: navProps) => {
   return (
-    <footer className={`w-screen bg-[${props.colorTheme.primary}]`}>
+    <footer
+      className={`w-screen bg-[${props.colorTheme.primary}] overflow-hidden w-full`}
+    >
       <svg
         className="bg-transparent"
         xmlns="http://www.w3.org/2000/svg"
