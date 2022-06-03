@@ -2,6 +2,7 @@ import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
 import Image from "next/image";
 import { Grid, Paper } from "@mui/material";
 import AgencyExpert from "../components/agency/AgencyExpert";
+import AgencyStrong from "../components/agency/AgencyStrong";
 
 const Agency = () => {
   return (
@@ -54,6 +55,9 @@ const Agency = () => {
       </div>
       <div className="bg-neutral-900">
         <AgencyExpert />
+      </div>
+      <div>
+        <AgencyStrong />
       </div>
     </section>
   );

@@ -5,7 +5,6 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Typography } from "@mui/material";
 
 const agencyExpertData = [
   {
@@ -53,7 +52,7 @@ const AgencyExpert = () => {
               {data.icon}
             </p>
             <div className="col-span-4 row-span-2 px-6">
-              <h4 className="text-center text-2xl sm:text-3xl font-bold mb-3 lg:text-left text-gray-400">
+              <h4 className="text-center text-2xl sm:text-3xl font-bold mb-3 lg:text-left text-[#90D4C5]">
                 {data.title}
               </h4>
               <p className="text-center text-lg lg:text-left font-thin">
