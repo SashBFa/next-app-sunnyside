@@ -1,3 +1,4 @@
+import { Grid, Paper } from "@mui/material";
 import Image from "next/image";
 import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
 import ServiceDo from "../components/services/ServiceDo";
@@ -22,14 +23,19 @@ const Services = () => {
         <h3 className="text-center sm:text-left text-3xl font-bold px-12 sm:p-0 sm:text-4xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#90D4C5] to-[#19536B] drop-shadow-md mb-6">
           Optimize your digital communication
         </h3>
-        <div className="w-60 sm:w-80 lg:w-[40rem]">
+        <Grid
+          container
+          component={Paper}
+          elevation={6}
+          className="w-60 sm:w-80 lg:w-[40rem]"
+        >
           <Image
             src="./images/serviceImg.jpg"
             alt="computeur"
             width={4000}
             height={6000}
           />
-        </div>
+        </Grid>
       </div>
       <div className="bg-neutral-900">
         <ServiceDo />

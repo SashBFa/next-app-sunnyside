@@ -68,7 +68,6 @@ const ContactForm = () => {
               label="Email Address"
               name="email"
               autoComplete="email"
-              autoFocus
             />
             <TextField
               id="outlined-textarea"

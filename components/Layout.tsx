@@ -9,7 +9,7 @@ interface layoutProps {
   children: any;
 }
 
-const pages: string[] = ["about", "contact", "projects", "services"];
+const pages: string[] = ["agency", "contact", "projects", "services"];
 
 const Layout = (props: layoutProps) => {
   const refDim = useRef<any>();

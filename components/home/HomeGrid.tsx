@@ -1,6 +1,7 @@
 import { Box, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useContext } from "react";
 import { RespDimensions } from "../utils/AppContext";
 
@@ -57,9 +58,13 @@ const HomeGrid = () => {
           grow fast. Engage your clients through compelling visuals that do most
           of the marketing for you.
         </p>
-        <button className=" transition-all duration-500 ease-in-out uppercase font-bold text-gray-800 border-b-4 border-rose-400 m-2 hover:bg-rose-400 hover:p-2 hover:rounded-2xl hover:border-0 hover:m-0.5 sm:text-2xl">
-          Learn more
-        </button>
+        <Link href={"/services"}>
+          <a>
+            <button className=" transition-all duration-500 ease-in-out uppercase font-bold text-gray-800 border-b-4 border-rose-400 m-2 hover:bg-rose-400 hover:p-2 hover:rounded-2xl hover:border-0 hover:m-0.5 sm:text-2xl">
+              Learn more
+            </button>
+          </a>
+        </Link>
       </motion.article>
       <Grid
         item
@@ -106,9 +111,13 @@ const HomeGrid = () => {
           photographers, videographers, and copywriters, we will build and
           extend your brand in digital places.
         </p>
-        <button className=" transition-all duration-500 ease-in-out uppercase font-bold text-gray-800 border-b-4 border-amber-400 m-2 hover:bg-amber-400 hover:p-2 hover:rounded-2xl hover:border-0 hover:m-0.5 sm:text-2xl">
-          Learn more
-        </button>
+        <Link href={"/services"}>
+          <a>
+            <button className=" transition-all duration-500 ease-in-out uppercase font-bold text-gray-800 border-b-4 border-amber-400 m-2 hover:bg-amber-400 hover:p-2 hover:rounded-2xl hover:border-0 hover:m-0.5 sm:text-2xl">
+              Learn more
+            </button>
+          </a>
+        </Link>
       </motion.article>
       <Grid
         item

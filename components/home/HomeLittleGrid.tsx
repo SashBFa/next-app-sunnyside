@@ -24,7 +24,7 @@ const imgData = [
 ];
 const HomeLittleGrid = () => {
   return (
-    <Grid container component="section" className="mt-6">
+    <Grid container component="section" className="mt-6 z-10">
       <Grid item xs={12} component={Paper} elevation={6}>
         <Box className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {imgData.map((img) => {
