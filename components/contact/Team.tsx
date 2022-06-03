@@ -43,7 +43,7 @@ const itemData = [
 
 const Team = () => {
   return (
-    <ImageList className="shadow-xl">
+    <ImageList className=" sm:w-80 2xl:w-96">
       {itemData.map((item) => (
         <ImageListItem
           key={item.img}

@@ -5,6 +5,7 @@ import {
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -45,34 +46,45 @@ const Footer = (props: navProps) => {
             <Image src={props.logo} alt="logo" width={124} height={24} />
           </a>
         </Link>
-        <ul className="flex justify-between w-full sm:w-2/3 lg:w-2/4 my-8 font-medium sm:text-xl">
+        <ul className="flex justify-between w-full sm:w-2/3 lg:w-2/4 my-3 font-medium sm:text-xl">
           {props.pages &&
             props.pages.map((page) => {
               return (
-                <li
+                <Typography
+                  component="li"
+                  color="secondary"
                   key={page}
-                  className={`capitalize text-[${props.colorTheme.secondary}] p-2 sm:py-1 sm:px-2 hover:bg-neutral-900/10 hover:scale-105`}
+                  className={` sm:text-2xl  capitalize p-2 sm:py-1 sm:px-2 hover:bg-neutral-900/10 hover:scale-105`}
                 >
                   <Link href={`/${page}`}>{page}</Link>
-                </li>
+                </Typography>
               );
             })}
         </ul>
-        <ul className="flex justify-between w-2/4 sm:w-1/3 lg:w-1/4 text-xl ">
+        <ul className="flex justify-between w-3/4 sm:w-1/3 lg:w-1/4 text-xl ">
           {socialLink.map((link) => {
             return (
-              <li
+              <Typography
+                component="li"
+                color="secondary"
                 key={link.id}
-                className={`text-[${props.colorTheme.secondary}] rounded-full w-10 h-10 drop-shadow hover:bg-neutral-900/10 flex items-center justify-center hover:scale-110`}
+                className={`text-xl sm:text-2xl lg:text-3xl rounded-full w-10 lg:w-12 h-10 lg:h-12 drop-shadow hover:bg-neutral-900/10 flex items-center justify-center hover:scale-110`}
               >
                 <Link href={link.link}>
                   <a>{link.icon}</a>
                 </Link>
-              </li>
+              </Typography>
             );
           })}
         </ul>
-        <p>Copyright © Sunnyside {new Date().getFullYear()}</p>
+        <Typography
+          component="p"
+          variant="body1"
+          color="secondary"
+          className="sm:text-xl mt-3"
+        >
+          Copyright © Sunnyside {new Date().getFullYear()}
+        </Typography>
       </section>
     </footer>
   );
