@@ -1,3 +1,5 @@
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   IconButton,
   ImageList,
@@ -8,50 +10,61 @@ import Image from "next/image";
 
 const itemData = [
   {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    name: "Breakfast",
-    function: "@bkristastucchio",
+    img: "./images/people/team/avatar1.jpg",
+    name: "Anna Waters",
+    function: "CEO",
   },
   {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    name: "Breakfast",
-    function: "@bkristastucchio",
+    img: "./images/people/team/avatar2.jpg",
+    name: "Amy Wyatt",
+    function: "Team Leader",
   },
   {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    name: "Breakfast",
-    function: "@bkristastucchio",
+    img: "./images/people/team/avatar3.jpg",
+    name: "Marcella Nixon",
+    function: "Marketing",
   },
   {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-    name: "Breakfast",
-    function: "@bkristastucchio",
+    img: "./images/people/team/avatar4.jpg",
+    name: "Catherine Cohen",
+    function: "Graphism",
   },
   {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    name: "Breakfast",
-    function: "@bkristastucchio",
+    img: "./images/people/team/avatar5.jpg",
+    name: "John Meier",
+    function: "Developer",
   },
   {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    name: "Breakfast",
-    function: "@bkristastucchio",
+    img: "./images/people/team/avatar6.jpg",
+    name: "William Harper",
+    function: "Developer",
   },
 ];
 
 const Team = () => {
   return (
-    <ImageList>
+    <ImageList className="shadow-xl">
       {itemData.map((item) => (
-        <ImageListItem key={item.img} className="w-32 sm:w-40 lg:w-60">
+        <ImageListItem
+          key={item.img}
+          className="w-36 sm:w-40 lg:cursor-pointer group relative"
+        >
           <Image
             src={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
             alt={item.name}
             loading="lazy"
             width="100%"
-            height="100%"
+            height="150%"
           />
-          <ImageListItemBar title={item.name} subtitle={item.function} />
+          <FontAwesomeIcon
+            icon={faCircleInfo}
+            className="hidden lg:block absolute text-white bottom-2 right-2 text-2xl group-hover:opacity-0"
+          />
+          <ImageListItemBar
+            title={item.name}
+            subtitle={item.function}
+            className="lg:opacity-0 group-hover:opacity-100 transition-all duration-500"
+          />
         </ImageListItem>
       ))}
     </ImageList>
