@@ -1,24 +1,12 @@
 import { Grid, Paper } from "@mui/material";
 import Image from "next/image";
-import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
+import Parallax from "../components/Parallax";
 import ServiceDo from "../components/services/ServiceDo";
 
 const Services = () => {
   return (
     <section>
-      <div className="relative">
-        <ParallaxProvider>
-          <ParallaxBanner
-            layers={[{ image: "./images/world.jpg", speed: -30 }]}
-            className="aspect-[2/1]  h-96 sm:h-[41rem] lg:h-screen"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <h1 className="text-4xl sm:text-7xl lg:text-9xl drop-shadow-md text-white text-center font-bold">
-              What we are doing ?
-            </h1>
-          </div>
-        </ParallaxProvider>
-      </div>
+      <Parallax page={"services"} />
       <div className="p-12 mb-12 flex flex-col items-center sm:flex-row sm:m-0 sm:p-8 lg:px-24 max-w-screen-xl xl:m-auto">
         <h3 className="text-center sm:text-left text-3xl font-bold px-12 sm:p-0 sm:text-4xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#90D4C5] to-[#19536B] drop-shadow-md mb-6">
           Optimize your digital communication

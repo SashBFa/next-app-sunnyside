@@ -21,7 +21,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Grid container component="section" sx={{ height: "100vh" }}>
+    <Grid container component="section" sx={{ height: "50rem" }}>
       <Grid
         item
         xs={false}

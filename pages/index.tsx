@@ -1,19 +1,17 @@
-import { ParallaxProvider } from "react-scroll-parallax";
 import HomeClient from "../components/home/HomeClient";
 import HomeGrid from "../components/home/HomeGrid";
 import HomeLittleGrid from "../components/home/HomeLittleGrid";
-import { ParallaxHead } from "../components/home/ParallaxHeader";
+import Parallax from "../components/Parallax";
 
-interface pageProps {
-  colorTheme: { primary: string; secondary: string };
-}
-
-const index = (props: pageProps) => {
+const index = () => {
   return (
     <>
-      <ParallaxProvider>
-        <ParallaxHead />
-      </ParallaxProvider>
+      <header className="block lg:hidden">
+        <Parallax page={"index"} />
+      </header>
+      <header className="hidden lg:block">
+        <Parallax page={"index2"} />
+      </header>
       <HomeGrid />
       <HomeClient />
       <HomeLittleGrid />

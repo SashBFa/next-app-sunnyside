@@ -1,25 +1,13 @@
-import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
 import Image from "next/image";
 import { Grid, Paper } from "@mui/material";
 import AgencyExpert from "../components/agency/AgencyExpert";
 import AgencyStrong from "../components/agency/AgencyStrong";
+import Parallax from "../components/Parallax";
 
 const Agency = () => {
   return (
     <section>
-      <div className="relative">
-        <ParallaxProvider>
-          <ParallaxBanner
-            layers={[{ image: "./images/aboutImg.jpg", speed: -30 }]}
-            className="aspect-[2/1]  h-96 sm:h-[41rem] lg:h-screen"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <h1 className="text-4xl sm:text-7xl lg:text-9xl drop-shadow-md text-white text-center font-bold">
-              Fewer rules more fun!
-            </h1>
-          </div>
-        </ParallaxProvider>
-      </div>
+      <Parallax page={"agency"} />
       <div className="p-12 flex flex-col items-center sm:flex-row-reverse sm:m-0 sm:p-8 lg:px-24 max-w-screen-xl xl:m-auto">
         <div className="sm:w-2/4 lg:w-4/5">
           <h3 className="text-center sm:text-right text-3xl font-bold px-12 sm:p-0 sm:text-4xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#90D4C5] to-[#19536B] drop-shadow-md mb-6">
