@@ -49,7 +49,7 @@ const servicesData = [
 
 const ServiceDo = () => {
   return (
-    <article className="max-w-screen-xl m-auto py-6 text-white sm:py-10">
+    <>
       <h2 className="text-center text-3xl font-bold px-12 sm:px-24 sm:text-4xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#90D4C5] to-[#19536B] drop-shadow-md">
         The services of our digital communication agency
       </h2>
@@ -61,7 +61,7 @@ const ServiceDo = () => {
         {servicesData.map((serv) => (
           <li
             key={serv.id}
-            className="flex flex-col justify-center items-center m-3 p-3 sm:w-80"
+            className="flex flex-col justify-center items-center m-3 p-3 sm:w-72"
           >
             <motion.p
               className={`${serv.color} text-9xl drop-shadow cursor-pointer`}
@@ -77,7 +77,7 @@ const ServiceDo = () => {
           </li>
         ))}
       </ul>
-    </article>
+    </>
   );
 };
 

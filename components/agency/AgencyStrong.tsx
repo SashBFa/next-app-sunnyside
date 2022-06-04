@@ -38,7 +38,7 @@ const agencyStrongData = [
 ];
 const AgencyStrong = () => {
   return (
-    <article className="max-w-screen-xl m-auto py-6 sm:py-10">
+    <>
       <h2 className="text-center text-3xl font-bold px-12 sm:px-24 sm:text-4xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#90D4C5] to-[#19536B] drop-shadow-md">
         Our strong points
       </h2>
@@ -62,7 +62,7 @@ const AgencyStrong = () => {
           </li>
         ))}
       </ul>
-    </article>
+    </>
   );
 };
 

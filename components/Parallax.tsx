@@ -26,8 +26,8 @@ const Parallax = (props: propsPages) => {
       titleBanner = "Let's have a talk !";
       break;
     case "projects":
-      imageBanner = "world.jpg";
-      titleBanner = "Our projects";
+      imageBanner = "projectImg.jpg";
+      titleBanner = "Our achievements";
       break;
     case "services":
       imageBanner = "world.jpg";
